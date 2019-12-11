@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -68,19 +69,19 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/clark/projects/OFDR/Work/OFDR.cache/wt [current_project]
-  set_property parent.project_path /home/clark/projects/OFDR/Work/OFDR.xpr [current_project]
-  set_property ip_repo_paths /home/clark/projects/OFDR/Src/IPs [current_project]
-  set_property ip_output_repo /home/clark/projects/OFDR/Work/OFDR.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/clark/Documents/OFDR/OFDR_Hardware/Work/OFDR.cache/wt [current_project]
+  set_property parent.project_path /home/clark/Documents/OFDR/OFDR_Hardware/Work/OFDR.xpr [current_project]
+  set_property ip_repo_paths /home/clark/Documents/OFDR/OFDR_Hardware/Src/IPs [current_project]
+  set_property ip_output_repo /home/clark/Documents/OFDR/OFDR_Hardware/Work/OFDR.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /home/clark/projects/OFDR/Work/OFDR.runs/synth_1/system_wrapper.dcp
+  add_files -quiet /home/clark/Documents/OFDR/OFDR_Hardware/Work/OFDR.runs/synth_1/system_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/clark/projects/OFDR/Work/OFDR.srcs/sources_1/bd/system/system.bd
+  add_files /home/clark/Documents/OFDR/OFDR_Hardware/Work/OFDR.srcs/sources_1/bd/system/system.bd
   set_param project.isImplRun false
-  read_xdc /home/clark/projects/OFDR/Src/constarins/Pins.xdc
-  read_xdc /home/clark/projects/OFDR/Src/constarins/Timings.xdc
+  read_xdc /home/clark/Documents/OFDR/OFDR_Hardware/Src/constarins/Pins.xdc
+  read_xdc /home/clark/Documents/OFDR/OFDR_Hardware/Src/constarins/Timings.xdc
   set_param project.isImplRun true
   link_design -top system_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false
