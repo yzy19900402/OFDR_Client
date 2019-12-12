@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 11 20:59:01 2019" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 12 16:26:01 2019" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -378,12 +378,12 @@
             <CONNECTION INSTANCE="Clk_125M_Changable_0" PORT="clk_125M"/>
             <CONNECTION INSTANCE="Count_PFD_0" PORT="S_AXI_ACLK"/>
             <CONNECTION INSTANCE="BRAM_Control_INT_FIFO_Control_0" PORT="clk_125M_IF"/>
-            <CONNECTION INSTANCE="BRAM_Control_TriBRAM_Control_0" PORT="S_AXI_ACLK"/>
-            <CONNECTION INSTANCE="BRAM_Control_TriBRAM_Control_0" PORT="clk_125M_BC"/>
             <CONNECTION INSTANCE="BRAM_Control_blk_mem_gen_1" PORT="clka"/>
             <CONNECTION INSTANCE="BRAM_Control_blk_mem_gen_2" PORT="clka"/>
             <CONNECTION INSTANCE="BRAM_Control_blk_mem_gen_3" PORT="clka"/>
             <CONNECTION INSTANCE="BRAM_Control_fifo_generator_0" PORT="clk"/>
+            <CONNECTION INSTANCE="BRAM_Control_TriBRAM_Control_0" PORT="clk_125M_BC"/>
+            <CONNECTION INSTANCE="BRAM_Control_TriBRAM_Control_0" PORT="S_AXI_ACLK"/>
             <CONNECTION INSTANCE="Control_axi_smc" PORT="aclk"/>
             <CONNECTION INSTANCE="Control_processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="Control_rst_RP_ADC_Data_0_125M" PORT="slowest_sync_clk"/>
@@ -6147,8 +6147,8 @@
             <CONNECTION INSTANCE="Control_processing_system7_0" PORT="S_AXI_HP0_ACLK"/>
             <CONNECTION INSTANCE="Control_processing_system7_0" PORT="S_AXI_HP1_ACLK"/>
             <CONNECTION INSTANCE="LC_BI_Module_0" PORT="clk_125MBI"/>
-            <CONNECTION INSTANCE="LC_DINT_v_TDC_0" PORT="clk_125M_INT"/>
             <CONNECTION INSTANCE="LC_Phase_Control_dxor_0" PORT="clk_125M_PC"/>
+            <CONNECTION INSTANCE="LC_DINT_v_TDC_0" PORT="clk_125M_INT"/>
             <CONNECTION INSTANCE="UDMA_Unlimited_DMA_0" PORT="M_1_AXI_ACLK"/>
             <CONNECTION INSTANCE="UDMA_Unlimited_DMA_0" PORT="M_2_AXI_ACLK"/>
             <CONNECTION INSTANCE="UDMA_Unlimited_DMA_0" PORT="clk"/>
